@@ -1,0 +1,30 @@
+<!--pages/comment/comment.wxml-->
+<view class="container">
+   <view class="content">
+      <view class="v1">{{Fraction}}分</view>
+      <view class="v2">完美 </view>
+      <view class="v3">
+         <div class="pingfen">评分:</div>
+         <div class="div" catchtouchstart='touchStart' catchtouchend="touchEnd">
+            <div wx:for="{{imgList}}" wx:key="index">
+               <image mode="widthFix" src="{{item}}"></image>
+            </div>
+            <!-- <i class="iconfont icon-shoucang"></i>
+            <i class="iconfont icon-shoucang"></i>
+            <i class="iconfont icon-shoucang"></i>
+            <i class="iconfont icon-shoucang"></i>
+            <i class="iconfont icon-shoucang"></i> -->
+         </div>
+         
+      </view>
+      <view class="v4">
+         <textarea placeholder='快来说说你的看法吧(6-200个字)' placeholder-class='place' bindblur="InputContent"></textarea>
+      </view>
+      <view class="v5">
+         <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">提交</button>
+      </view>
+   </view>
+   <modal hidden="{{hidden}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel="true">
+      评论成功
+   </modal>
+</view>

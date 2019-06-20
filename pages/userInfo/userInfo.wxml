@@ -1,0 +1,52 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="container">
+   <view class="content">
+      <view class="stu" wx:for="{{datas.userList}}" wx:key="index">
+         <image class="right_top" mode='widthFix' src="../../assets/images/student.png"></image>
+         <view>
+            <text space='ensp'>学生姓名： </text><span>{{item.name}}</span>
+         </view>
+         <view>
+            <text space='ensp'>学生年龄： </text><span>{{item.age}}</span>
+         </view>
+         <view>
+            <text space='ensp'>手机号码： </text><span>{{item.phone}}</span>
+         </view>
+         <view>
+            <text space='ensp'>学校单位： </text><span>{{item.company}}</span>
+         </view>
+         <view>
+            <text space='ensp'>出发城市： </text><span>{{item.city}}</span>
+         </view>
+         <view>
+            <text space='ensp'>身份证号： </text><span>{{item.card}}</span>
+         </view>
+         <view class="oper">
+            <image mode='widthFix' src="../../assets/images/bianji.png"></image>
+            <image mode='widthFix' src="../../assets/images/shanchu.png"></image>
+         </view>
+      </view>
+      <view class="guar" wx:for="{{datas.guardianList}}" wx:key="index">
+         <image class="right_top" mode='widthFix' src="../../assets/images/guardian.png"></image>
+         <view>
+            <text space='emsp'>监护人姓名： </text><span>{{item.name}}</span>
+         </view>
+         <view>
+            <text space='emsp'>监护人电话  </text><span>{{item.phone}}</span>
+         </view>
+         <view>
+            <text space='emsp'>身份证号：  </text><span>{{item.card}}</span>
+         </view>
+         <view class="oper">
+            <image mode='widthFix' src="../../assets/images/bianji.png"></image>
+            <image mode='widthFix' src="../../assets/images/shanchu.png"></image>
+         </view>
+      </view>
+      <view class="addUser" catchtap='addUser'>
+         <button>新增常用用户信息</button>
+      </view>
+      <view class="addGuar" catchtap='addGuar'>
+         <button>新增常用监护人信息</button>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,324 @@
+/**index.wxss**/
+page{
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(250, 250, 250, 1) 40%, rgba(250, 250, 250, 1) 98%, #fafafa 100%); 
+   /* background: linear-gradient(top bottom, #fff 40%, #fafafa 60%, #fafafa 100%); */
+}
+.container{
+   height: auto !important;
+}
+.zhezhao {
+   width: 100%;
+   height: 100%;
+   background: black;
+   opacity: 0.7;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 4;
+}
+.zhe {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 4;
+}
+
+.shuaixuan {
+   width: 564rpx;
+   height: 100%;
+   overflow: scroll;
+   background: #fff;
+   border-top: 1px solid #eee;
+   position: fixed;
+   top:0;
+   right: -90%;
+   z-index: 5;
+   padding-bottom: 87rpx;
+   box-sizing: border-box;
+}
+.shows{
+   animation:mymove 0.3s linear forwards;
+}
+.hides{
+   animation:mymoves 0.3s;
+}
+@keyframes mymove
+{
+   from {right: -90%;}
+   to {right: 0;}
+}
+@keyframes mymoves
+{
+   from {right: 0;}
+   to {right: -90%;}
+}
+
+.contents{
+   padding: 35rpx 28rpx;
+   box-sizing: border-box;
+   border-bottom: 1px solid #eeeeee;
+}
+.contents .title {
+   font-size: 30rpx;
+   padding-left: 1%;
+   padding-bottom: 20rpx;
+}
+
+.contents_body,.contents_body1 {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+}
+.contents_body view {
+   width: 31%;
+   height: 53rpx;
+   text-align: center;
+   line-height: 53rpx;
+   font-size: 24rpx;
+   background: #f2f2f2;
+   border-radius: 10rpx;
+   margin: 1%;
+   padding: 0 30rpx;
+   box-sizing: border-box;
+   overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+}
+.contents_body .active{
+   background: #c1f1e6;
+   color: #00a681;
+   position: relative;
+   z-index: 1;
+   background-image:url("http://flynew.oss-cn-hangzhou.aliyuncs.com/game/wechat/zcc/pulicImage/gou.png");
+   background-repeat: no-repeat;
+   background-size: 15px;
+   background-position: 100% 105%;
+}
+.contents_body1 view {
+   width: 48%;
+   height: 53rpx;
+   text-align: center;
+   line-height: 53rpx;
+   font-size: 24rpx;
+   background: #f2f2f2;
+   border-radius: 10rpx;
+   margin: 1%;
+   padding: 0 25rpx;
+   box-sizing: border-box;
+   overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+}
+.contents_body1 .active{
+   background: #c1f1e6;
+   color: #00a681;
+   position: relative;
+   z-index: 1;
+   background-image:url("http://flynew.oss-cn-hangzhou.aliyuncs.com/game/wechat/zcc/pulicImage/gou.png");
+   background-repeat: no-repeat;
+   background-size: 15px;
+   background-position: 100% 105%;
+}
+.btn {
+   width: 564rpx;
+   height: 87rpx;
+   position: fixed;
+   right: -90%;
+   bottom: 0;
+   display: flex;
+   z-index: 10;
+}
+
+.btn .reset {
+   flex: 1;
+   text-align: center;
+   line-height: 87rpx;
+   background: #f2f2f2;
+   font-size: 33.59rpx;
+}
+
+.btn .comfirm {
+   flex: 1;
+   text-align: center;
+   line-height: 87rpx;
+   background: #00c498;
+   color: #fff;
+   font-size: 33.59rpx;
+}
+/* .height_25{
+   width: 100%;
+   height: 25rpx;
+} */
+/* 头部 */
+.header {
+   width: 100%;
+   height: 55rpx;
+   display: flex;
+   line-height: 55rpx;
+   /* margin-top: 25rpx; */
+   margin: 25rpx 0;
+}
+.header .didian {
+   width: 150rpx;
+   height: 55rpx;
+   line-height: 55rpx;
+   font-size: 30rpx;
+}
+.header .didian image{
+   width: 30rpx;
+   vertical-align: middle;
+}
+
+.header .input {
+   flex: 1;
+   position: relative;
+}
+.header input {
+   display: inline-block;
+   width: 100%;
+   height: 55rpx;
+   line-height: 55rpx;
+   padding-left: 50rpx;
+   box-sizing: border-box;
+   border-radius: 25px;
+   background: #f4f4f4;
+   font-size: 26rpx;
+}
+.header .input image{
+   width: 30rpx;
+   position: absolute;
+   top: 50%;
+   left: 14rpx;
+   transform: translateY(-50%);
+}
+
+.placeholder {
+   font-size: 24rpx;
+}
+/* 轮播图 */
+.banner {
+   width: 100%;
+}
+.swipers{
+   height: 306rpx;
+}
+.banner image {
+   width: 100%;
+   height: 304rpx !important;
+   border-radius: 10rpx;
+}
+
+.tabBox {
+   width: 100%;
+   padding: 25rpx 0;
+   box-sizing: border-box;
+}
+
+.tabBox .tabList {
+   width: 100%;
+   padding-bottom: 30rpx;
+   display: flex;
+}
+
+.tabList .li {
+   flex: 1;
+   text-align: center;
+   font-size: 30rpx;
+   color: #a0a0a0;
+   position: relative;
+}
+.tabList .li image{
+   width: 26rpx;
+   vertical-align: top;
+   padding-top: 8rpx;
+}
+.tabList .li:last-child{
+   border-left: 1px solid #7b7b7b;
+}
+.actives{
+   color: #00c498 !important;
+}
+.actives::before{
+   position: absolute;
+   content: '';
+   display: inline-block;
+   width: 60rpx;
+   height: 4rpx;
+   left: 50%;
+   top: 120%;
+   transform: translateX(-50%);
+   background: #00c498;
+}
+
+.img {
+   width: 100%;
+}
+
+.img image {
+   width: 100%;
+   display: block;
+}
+.bodys{
+   background: #fff;
+   border-bottom-left-radius: 10rpx;
+   border-bottom-right-radius: 10rpx;
+   padding-bottom: 20rpx;
+   margin-bottom:20rpx;
+   box-sizing: border-box;
+}
+.tabBox .title {
+   font-size: 28rpx;
+   padding: 0 20rpx;
+   padding-top: 20rpx;
+   box-sizing: border-box;
+}
+
+.t1 {
+   width: 100%;
+   padding: 0 20rpx;
+   box-sizing: border-box;
+}
+
+.t1 div {
+   display: inline-block;
+   line-height: 50rpx;
+   font-size: 24rpx;
+   color: #8f8f8f;
+   margin-right: 40rpx;
+}
+.t1 div image{
+   width: 24rpx;
+   vertical-align: middle;
+}
+/* .icon-yonghu,.icon-clock,.icon-rili{
+   color: #00c498;
+   font-size: 24rpx;
+   font-weight: bold;
+} */
+.t1 div span{
+   vertical-align: middle;
+   padding-left: 15rpx;
+}
+
+.t2 {
+   width: 100%;
+   padding: 0 20rpx;
+   box-sizing: border-box;
+}
+
+.t2 div {
+   display: inline-block;
+   font-size: 22rpx;
+   color: #c5c8d3;
+   padding: 0 20rpx;
+   height: 40rpx;
+   line-height: 40rpx;
+   text-align: center;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   margin-right: 10rpx;
+}

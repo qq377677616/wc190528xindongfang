@@ -1,0 +1,61 @@
+<!--pages/activeDetail/activeDetail.wxml-->
+<view class="container">
+   <view class="content">
+      <view class="banner">
+         <image mode="widthFix" src="{{detail.pic_up}}"></image>
+      </view>
+      <view class="title">
+         {{detail.title}}
+      </view>
+      <view class="c1">
+         <text space='emsp'>时 间：</text>{{detail.start_time}}-{{detail.end_time}}
+      </view>
+      <view class="c2">
+         <view class="left">
+            <text space='emsp'>地 点：</text>{{detail.address}}
+         </view>
+         <view class="right">
+            <i class="iconfont icon-yonghu1"></i>{{detail.number}}人已参与
+         </view>
+         <i class="iconfont icon-fenxiang"></i>
+      </view>
+      <view class="notes">
+         <view class="h1">
+            报名须知
+         </view>
+         <view class="body">
+               {{detail.notice}}
+         </view>
+      </view>
+      <view class="activeDesc">
+         <view class="h1">
+            活动介绍
+         </view>
+         <view class="body">
+               {{detail.introduce}}
+         </view>
+         <view class="img">
+            <image mode='widthFix' src="{{detail.pic_down}}"></image>
+         </view>
+         <view class="money">
+            <view class="m1">
+               <view class="left">
+                  支付金额
+               </view>
+               <view class="right">
+                  {{detail.price}}元
+               </view>
+            </view>
+            <view class="m2">
+               已优惠{{detail.discount}}元
+            </view>
+         </view>
+      </view>
+   </view>
+   <view class="kefu">
+      <i class="iconfont icon-2zaixiankefubai"></i>
+   </view>
+   <view class="payment">
+      立即支付
+   </view>
+</view>

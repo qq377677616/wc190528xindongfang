@@ -1,0 +1,57 @@
+<!--pages/searchDetail/searchDetail.wxml-->
+<view class="container">
+   <view class="box">
+      <view class="search">
+         <input placeholder='单行输入' placeholder-class='placeholder'></input>
+         <view class="canel" catchtap='canel'>搜索</view>
+      </view>
+      <view class="content" wx:for="{{datas}}">
+         <view class="title">{{item.title}}</view>
+         <view class="{{item.title=='主题'?'content_body1':'content_body'}}">
+            <view wx:for="{{item.arrList}}" wx:for-item="items" wx:key="indexs" wx:for-index="indexs" class="{{item.index == indexs ? 'active':''}}" data-indexs="{{indexs}}" data-index="{{index}}" catchtap='btn1'>
+               {{items.name}}
+               <!-- {{indexs}} -->
+            </view>
+         </view>
+      </view>
+   </view>
+   <view class="bodys" wx:for="{{datas}}" wx:key="index">
+      <view class="img" catchtap='link_detail'>
+         <image mode="widthFix" src="../../assets/images/b2.png"></image>
+      </view>
+      <view class="title">
+         【英国高端夏校项目资源系】2线-【英国九大公学】英国哈罗公学夏校
+      </view>
+      <view class="t1">
+         <div>
+            <image mode="widthFix" src="../../assets/images/user.png"></image>
+            <!-- <i class="iconfont icon-yonghu"></i> -->
+            <span>12岁-14岁</span>
+         </div>
+         <div>
+            <image mode="widthFix" src="../../assets/images/clock.png"></image>
+            <!-- <i class="iconfont icon-clock"></i> -->
+            <span>2019.6月-8月</span>
+         </div>
+         <div>
+            <image mode="widthFix" src="../../assets/images/rili.png"></image>
+            <!-- <i class="iconfont icon-rili"></i> -->
+            <span>15天</span>
+         </div>
+      </view>
+      <view class="t2">
+         <div>
+            背景提升
+         </div>
+         <div>
+            定制课程
+         </div>
+         <div>
+            顶级夏校
+         </div>
+         <div>
+            国际视野
+         </div>
+      </view>
+   </view>
+</view>

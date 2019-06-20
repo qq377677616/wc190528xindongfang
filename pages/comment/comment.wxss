@@ -1,0 +1,75 @@
+/* pages/comment/comment.wxss */
+page{
+   width: 100%;
+   height: 100%;
+}
+.container {
+   background: #fafafa;
+   padding: 28rpx 0 140rpx;
+}
+.content{
+   width: 90%;
+   /* height: 100%; */
+   margin: 0 auto;
+   padding: 88rpx 0;
+   background: #fff;
+   box-shadow: 0px 0px 20px #e5e5ea; 
+   border-radius: 10rpx;
+}
+.v1{
+   text-align: center;
+   font-size: 51rpx;
+   color: #ffcc53;
+   margin-bottom: 10rpx;
+}
+.v2{
+   text-align: center;
+   font-size: 30rpx;
+   margin-bottom: 28rpx;
+}
+.v3{
+   text-align: center;
+   font-size: 30rpx;
+   color: #949494;
+   margin-bottom: 50rpx;
+}
+.v3 i{
+   color: #ececec;
+   margin-right: 10rpx;
+   font-size: 60rpx;
+}
+.v3 .pingfen{
+   vertical-align: middle;
+}
+.v3 .div{
+   display: inline-block;
+   height: 60rpx;
+}
+.div image{
+   width: 50rpx;
+   margin-left: 15rpx;
+   vertical-align: middle;
+}
+.v4 textarea{
+   width: 90%;
+   margin: 0 auto;
+   border: 1px solid #d7d7d7;
+   border-radius: 15rpx;
+   padding: 12rpx;
+}
+.place{
+   color: #d9d9d9;
+   font-size: 28rpx;
+}
+.v5 button::after{
+   border: none;
+}
+.v5 button{
+   width: 70%;
+   margin: auto;
+   margin-top: 80rpx;
+   background: #03c79c;
+   color: #fff;
+   border-radius: 25px;
+   box-shadow: 0px 0px 40px #ddf1ec;
+}

@@ -1,0 +1,68 @@
+/* pages/userInfo/userInfo.wxss */
+page{
+   width: 100%;
+   height: 100%;
+}
+.container{
+   background: #fafafa;
+   padding: 28rpx 30rpx 140rpx;
+}
+.content{
+   width: 100%;
+   overflow-y: scroll;
+}
+.stu,.guar{
+   background: #fff;
+   box-shadow: 0px 0px 20px #e5e5ea; 
+   border-radius: 10rpx;
+   padding: 30rpx;
+   box-sizing: border-box;
+   font-size: 28rpx;
+   margin-bottom: 30rpx;
+   position: relative;
+}
+.right_top{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 120rpx;
+}
+.stu view{
+   margin-bottom: 15rpx;
+}
+.guar view{
+   margin-bottom: 15rpx;
+}
+.stu span{
+   color: #949494;
+}
+.guar span{
+   color: #949494;
+}
+.oper{
+   text-align: right;
+   margin: 0 !important;
+}
+.oper image{
+   width: 40rpx;
+   margin-left: 10rpx;
+}
+.addUser button{
+   background: #02c59b;
+   color: #fff;
+   border-radius: 25px;
+   width: 60%;
+   margin-top: 60rpx;
+   box-shadow: 0px 0px 40px #dbede9;
+}
+.addUser button::after{
+   border:none;
+}
+.addGuar button{
+   background: #fff;
+   color: #02c59b;
+   border: 1px solid #02c59b;
+   border-radius: 25px;
+   width: 60%;
+   margin-top: 60rpx;
+}

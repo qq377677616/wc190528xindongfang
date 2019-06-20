@@ -1,0 +1,13 @@
+/**app.wxss**/
+@charset "UTF-8";
+/* 定义一个返回rpx像素的函数*/
+@import "assets/sass/iconfont/iconfont.wxss";
+.container {
+  height: 100%;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 29rpx;
+  box-sizing: border-box;
+} 

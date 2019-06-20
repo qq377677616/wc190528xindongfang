@@ -1,0 +1,205 @@
+<!--pages/activeDetail/activeDetail.wxml-->
+<!--pages/studyDetail/studyDetail.wxml-->
+<view class="container">
+   <view class="content">
+      <view class="banner">
+         <image mode='widthFix' src="../../assets/images/b2.png"></image>
+      </view>
+      <view class="title">
+         【英国高端夏校项目资源系】2线-【英国九大公学】英国哈罗公学夏校
+      </view>
+      <view class="yubaoming">
+         <text space="emsp">预报名： </text><span class="moneny">￥5000.00</span><span class="rmb">RMB</span>
+         <view class="shares">
+            <image mode="widthFix" src="../../assets/images/fenxiang.png"></image>
+            <view>分享</view>
+         </view>
+      </view>
+      <view class="info">
+         <view class="info5">
+            <div>背景提升</div>
+            <div>定制课程</div>
+            <div>顶级夏校</div>
+            <div>国际视野</div>
+         </view>
+         <view class="info1">
+            招生对象：<span class="font">7岁-15岁</span>
+         </view>
+         <view class="info2">
+            <text space="emsp">课程天数</text>：<span class="font">15天</span>
+         </view>
+         <!-- <view class="info3">
+            报名截止：<span class="font">2019.06.08报名截止</span>
+         </view> -->
+         <view class="info4">
+            <div><text space="emsp">包  含</text>：</div>
+            <div class="inline font">
+               课程、机票、签证、活动、食宿、保险、新东方导师
+            </div>
+         </view>
+      </view>
+      <view class="tuanqi">
+         <view class="t2">
+            <text space="emsp">人  数：</text>
+            <span class="font">
+               <!-- 减号 -->
+               <text class="normal" bindtap="bindMinus">-</text>
+               <!-- 数值 -->
+               <input type="number" bindchange="bindManual" value="{{num}}" />
+               <!-- 加号 -->
+               <text class="normal" bindtap="bindPlus">+</text>
+            </span>
+         </view>
+      </view>
+      <!-- 出发日期 -->
+      <view class="setoutDate">
+         <view class="setOut"> 
+            <view class="left">出发日期</view>
+            <view class="right">
+               <image mode="widthFix" src="../../assets/images/rili.png"></image>
+               <!-- <i class="iconfont icon-rili"></i> -->
+            </view>
+         </view>
+         <view class="setList">
+            <view class="list" wx:for="{{lists}}" wx:key="index">
+               <view class="setOut">
+                  <view class="left">中学生团</view>
+                  <view class="right">
+                     报名中
+                  </view>
+               </view>
+               <view class="body">
+                  <view class="c1">
+                     北京
+                  </view>
+                  <view class="c1">
+                     2019.01.01-05.05
+                  </view>
+                  <view class="c1">
+                     招生对象:10-14岁
+                  </view>
+                  <view class="c1">
+                     截止报名：05.29
+                  </view>
+               </view>
+               <view class="up" catchtap='signUp'>
+                  免费报名
+               </view>
+            </view>
+         </view>
+      </view>
+      <view class="liangdian">
+         <view class="titles">课程亮点</view>
+         <view class="titles_img">
+            <image mode="widthFix" src="../../assets/images/b2.png"></image>
+         </view>
+         <view class="titles_desc">
+            <div>国际视野</div>
+            <div>国际视野</div>
+            <div>国际视野</div>
+            <div>国际视野</div>
+            <div>国际视野</div>
+            <div>国际视野</div>
+         </view>
+         <view class="titles">游学行程</view>
+         <view class="tabList">
+            <div class="{{index==current?'active':''}}" wx:for="{{tripList}}" wx:key="index" data-index="{{index}}" catchtap="tab">{{item.name}}</div>
+            <!-- <div>第二天</div>
+            <div>第三天</div>
+            <div>第四天</div>
+            <div>第五天</div>
+            <div>第六天</div>
+            <div>第七天</div> -->
+         </view>
+      </view>
+      <view class="userComment">
+         <view class="u1">中国 <image mode="widthFix" src="../../assets/images/feiji.png"></image> 伦敦</view>
+         <view class="u2">
+            游学主题|结识游学小伙伴,英国夏校初体验
+         </view>
+         <view class="u3">
+            <text space='ensp'>上午: 英语应用技能专修课程，进行小组成果展示,总结哈罗研究成果 下午: 收获哈罗夏校结业证书与学习报告</text>
+         </view>
+         <view class="u4">
+            <image mode='widthFix' src="../../assets/images/b2.png"></image>
+         </view>
+         <view class="u5">
+            <view class="ucomment">用户评论</view>
+            <view class="writeComment" catchtap='whiteComment'>写评论</view>
+         </view>
+      </view>
+      <view class="comment">
+         <view class="body">
+            <view class="userImg">
+               <image src="../../assets/images/userImg.png"></image>
+            </view>
+            <view class="body_content">
+               <view>风居住的街道</view>
+               <view>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+               </view>
+            </view>
+         </view>
+         <view class="comment_content">
+            <span></span><div>用户评论</div>
+         </view>
+         <view class="comment_give">
+            <span></span>
+            <div>
+               <view class="left">1分钟前</view>
+               <view class="right">
+                  <image mode="widthFix" src="../../assets/images/dianzan.png"></image>
+                  689
+               </view>
+            </div>
+         </view>
+      </view>
+      <view class="comment">
+         <view class="body">
+            <view class="userImg">
+               <image src="../../assets/images/userImg.png"></image>
+            </view>
+            <view class="body_content">
+               <view>风居住的街道</view>
+               <view>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+                  <image mode="widthFix" src="../../assets/images/shoucang.png"></image>
+               </view>
+            </view>
+         </view>
+         <view class="comment_content">
+            <span></span><div>用户评论</div>
+         </view>
+         <view class="comment_give">
+            <span></span>
+            <div>
+               <view class="left">1分钟前</view>
+               <view class="right">
+                  <image mode="widthFix" src="../../assets/images/dianzan.png"></image>
+                  689
+               </view>
+            </div>
+         </view>
+      </view>
+   </view>
+   <!-- 底部 -->
+   <view class="footer">
+      <button class="customer">
+         <image mode="widthFix" src="../../assets/images/kefu.png"></image>
+         <view>客服</view>
+      </button>
+      <button class="share">
+         已优惠￥223
+      </button>
+      <!-- <button class="deposit_payment">定金支付</button> -->
+      <button class="sign_up" catchtap='signUp'>立即报名</button>
+   </view>
+</view>
+
+
+

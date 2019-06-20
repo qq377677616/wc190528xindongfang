@@ -1,0 +1,29 @@
+<!--logs.wxml-->
+<view class="container log-list">
+   <block wx:for="{{logs}}" wx:for-item="log">
+      <text class="log-item">{{index + 1}}. {{log}}</text>
+      <!-- 
+         国际游学
+            首页---index
+            详情页---index_detail
+            报名页---sign_up
+            评分---comment
+         国内研学
+            首页---study
+            国内详情---studyDetail
+         营地教育
+            首页---camp
+            营地详情---campDetail
+         个人空间
+            首页---personal
+            我的游学账号=>绑定游学账号---bind_account
+            我的游学账号=>注册游学账号---reg_account
+            我的游学订单=>myOrder
+            用户信息=>userInfo
+            用户添加/编辑=>userDetail
+    
+    
+    
+      -->
+   </block>
+</view>

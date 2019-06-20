@@ -1,0 +1,149 @@
+<!--index.wxml-->
+<scroll-view scroll-y class="container">
+   <!-- 遮罩层 -->
+   <view class="zhezhao" wx:if="{{isShow}}" bindtap='close'></view>
+   <!-- <view class="zhe" wx:if="{{isSerach}}" bindtap='closes'></view> -->
+   <!-- 弹出框 -->
+   <view class="shuaixuan {{isShow?'shows':'hides'}}">
+      <view class="contents">
+         <view class="title">{{region.title}}</view>
+         <view class="{{region.title=='主题'?'contents_body1':'contents_body'}}">
+            <view wx:for="{{region.arrList}}" wx:key="index" class="{{index == current1 ? 'active':''}}" data-index="{{index}}" catchtap='btn1'>
+               {{item.BusinessAreaName}}
+               <!-- {{indexs}} -->
+            </view>
+         </view>
+      </view>
+      <view class="contents">
+         <view class="title">{{ages.title}}</view>
+         <view class="contents_body">
+            <view wx:for="{{ages.arrList}}" wx:key="index" class="{{index == current2 ? 'active':''}}" data-index="{{index}}" catchtap='btn2'>
+               {{item.name}}
+               <!-- {{indexs}} -->
+            </view>
+         </view>
+      </view>
+      <view class="contents">
+         <view class="title">{{theme.title}}</view>
+         <view class="contents_body1">
+            <view wx:for="{{theme.arrList}}" wx:key="index" class="{{index == current3 ? 'active':''}}" data-index="{{index}}" catchtap='btn3'>
+               {{item.RouteCategoryName}}
+               <!-- {{indexs}} -->
+            </view>
+         </view>
+      </view>
+      <!-- 底部按钮 -->
+      <view class="btn {{isShow?'shows':'hides'}}">
+         <div class="reset" catchtap="reset">重置</div>
+         <div class="comfirm" catchtap="submit">确定</div>
+      </view>
+   </view>
+   <!-- <view class="height_25"></view> -->
+   <view class="header" wx:show="{{!isSerach}}">
+      <view class="didian">
+         <view class="section">
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+               <view class="picker">
+                  {{city}}
+                  <image mode="widthFix" src="../../assets/images/xia.png"></image>
+               </view>
+            </picker>
+         </view>
+         
+      </view>
+      <view class="input">
+         <image mode="widthFix" src="../../assets/images/search.png"></image>
+         <input placeholder='输入想去游学的地点' placeholder-class="placeholder" disabled='disabled' bindtap='inputFocus'/>
+      </view>
+   </view>
+   <view class="banner">
+      <swiper
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      duration="{{duration}}"
+      circular="{{circular}}"
+      indicator-color="#fff"
+      >
+      <block wx:for="{{imgUrls}}" wx:key="index">
+         <swiper-item>
+            <!-- <image src="{{item}}" class="slide-image" mode="widthFix" width="100%" /> -->
+            <view class="swipers" style="background-image:url('{{item}}');background-size: cover;"></view>
+         </swiper-item>
+      </block>
+      </swiper>
+   </view>
+   <view class="tabBox">
+      <div class="tabList">
+         <div class="li {{current==0?'actives':''}}" bindtap="clickTab" data-current="0">
+            推荐
+         </div>
+         <div class="li {{current==1?'actives':''}}" bindtap="clickTab" data-current="1">
+            最新
+         </div>
+         <div class="li {{current==2?'actives':''}}" bindtap="clickTab" data-current="2">
+            热度
+         </div>
+         <div class="li" catchtap="select">
+            筛选
+            <image mode="widthFix" src="../../assets/images/shuaixuan.png"></image>
+         </div>
+      </div>
+      <view class="bodys" wx:for="{{routeList}}" wx:key="index">
+         <view class="img" data-id="{{item.RouteID}}" catchtap='link_detail'>
+            <image mode="widthFix" src="../../assets/images/b2.png"></image>
+         </view>
+         <view class="title">
+            <!-- 【英国高端夏校项目资源系】2线-【英国九大公学】英国哈罗公学夏校 -->
+            {{item.RouteName}}
+         </view>
+         <view class="t1">
+            <div>
+               <image mode="widthFix" src="../../assets/images/user.png"></image>
+               <!-- <i class="iconfont icon-yonghu"></i> -->
+               <span>{{item.StudentTypeValueDesc}}</span>
+            </div>
+            <div>
+               <image mode="widthFix" src="../../assets/images/clock.png"></image>
+               <!-- <i class="iconfont icon-clock"></i> -->
+               <span>2019.6月-8月</span>
+            </div>
+            <div>
+               <image mode="widthFix" src="../../assets/images/rili.png"></image>
+               <!-- <i class="iconfont icon-rili"></i> -->
+               <span>{{item.RouteDay}}天</span>
+            </div>
+         </view>
+         <view class="t2">
+            <div>
+               背景提升
+            </div>
+            <div>
+               定制课程
+            </div>
+            <div>
+               顶级夏校
+            </div>
+            <div>
+               国际视野
+            </div>
+         </view>
+      </view>
+      
+   </view>
+   <!-- 点击搜索弹出框 -->
+   <!-- <view class="box" wx:if="{{isSerach}}">
+      <view class="search">
+         <input placeholder='单行输入' placeholder-class='placeholder'></input>
+         <view class="canel" catchtap='canel'>取消</view>
+      </view>
+      <view class="content" wx:for="{{datas}}">
+         <view class="title">{{item.title}}</view>
+         <view class="{{item.title=='主题'?'content_body1':'content_body'}}">
+            <view wx:for="{{item.arrList}}" wx:for-item="items" wx:key="indexs" wx:for-index="indexs" class="{{item.index == indexs ? 'active':''}}" data-indexs="{{indexs}}" data-index="{{index}}" catchtap='btn1'>
+               {{items.name}}
+            </view>
+         </view>
+      </view>
+   </view> -->
+</scroll-view>

@@ -1,0 +1,34 @@
+<!--pages/reg_account/reg_account.wxml-->
+<view class="container">
+   <view class="content">
+      <view class="input">
+         <text space='ensp'>手 机 号： </text>
+         <input placeholder='请输入手机号' placeholder-class="placeholder"></input>
+      </view>
+      <view class="code">
+         <text space='ensp'>验 证 码： </text>
+         <input placeholder='请输入验证码' placeholder-class="placeholder"></input>
+         <view class="code1"></view>
+      </view>
+      <view class="code">
+         <text space='ensp'>短 信 码： </text>
+         <input placeholder='请输入短信码' placeholder-class="placeholder"></input>
+         <button class="code2">获取短信码</button>
+      </view>
+      <view class="input">
+         <text space='ensp'>密    码： </text>
+         <input placeholder='至少6位密码' placeholder-class="placeholder"></input>
+      </view>
+      <view class="input">
+         <text space='ensp'>确认密码： </text>
+         <input placeholder='请输入确认密码' placeholder-class="placeholder"></input>
+      </view>
+      <view class="inputs">
+         <div class="{{isCheck?'active':''}}" catchtap="check"></div> <text catchtap="check">我接受并同意《用户服务条款》和《隐私权相关政策》</text>
+      </view>
+      <view class="reg">
+         <button catchtap='toReg'><text space='emsp'>同意并注册</text></button>
+      </view>
+   </view>
+   <alerts duixiang="{{duixiang}}" bindyes="tapyes" show="{{isAlert}}"></alerts>
+</view>

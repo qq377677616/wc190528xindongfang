@@ -1,0 +1,47 @@
+<!--pages/personal/personal.wxml-->
+<view class="container">
+   <view class="header">
+      <image class="bg" mode="widthFix" src="../../assets/images/pg.png"></image>
+      <!-- <image class="userImg" mode="widthFix" src="../../assets/images/userImg.png"></image> -->
+      <view class="box">
+         <image class="userImg" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+         <view class="nikename">{{userInfo.nickName}}</view>
+         <button class="getAvtar" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像 </button>
+      </view>
+      <view class="tabs">
+         <view catchtap='navAccount'>
+            <image mode='widthFix' src="../../assets/images/maozi.png"></image>
+            <view>游学</view>
+         </view>
+         <view catchtap='myOrder'>
+            <image mode='widthFix' class="qizi" src="../../assets/images/qizi.png"></image>
+            <view>活动</view>
+         </view>
+         <view catchtap='photo'>
+            <image mode='widthFix' src="../../assets/images/photo.png"></image>
+            <view>相册</view>
+         </view>
+         <view catchtap='jiangzuo'>
+            <image mode='widthFix' src="../../assets/images/shu.png"></image>
+            <view>讲座</view>
+         </view>
+      </view>
+   </view>
+   <view class="content">
+      <view class="li">
+         <text space='emsp'>关于我们</text>
+         <image class="you" mode="widthFix" src="../../assets/images/you.png"></image>
+      </view>
+      <view class="li">
+         <text space='emsp'>用户隐私</text>
+         <image class="you" mode="widthFix" src="../../assets/images/you.png"></image>
+      </view>
+      <view class="li">
+         <text space='emsp'>使用条款</text>
+         <image class="you" mode="widthFix" src="../../assets/images/you.png"></image>
+      </view>
+   </view>
+   <modal hidden="{{hidden}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel="true">
+      暂未开通
+   </modal>
+</view>

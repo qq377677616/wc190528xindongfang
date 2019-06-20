@@ -1,0 +1,45 @@
+<!--pages/sign_up/sign_up.wxml-->
+<view class="container">
+   <view class="content" wx:for="{{lists}}" wx:key="index">
+      <view class="input">
+         <i class="iconfont icon-weibiaoti562"></i>
+         <input placeholder='请输入你的姓名' placeholder-class='placeholder' data-index="{{index}}" bindblur="InputName"></input>
+      </view>
+      <view class="input">
+         <i class="iconfont icon-shouji"></i>
+         <input placeholder='请输入你的手机号' placeholder-class='placeholder' data-index="{{index}}" bindblur="InputTel" maxlength='11'></input>
+      </view>
+      <view class="section">
+         <i class="iconfont icon-qizi"></i>
+         <picker bindchange="bindPickerChange1" data-index="{{index}}" value="{{item.tuan}}" range="{{array}}" range-key="ProjectAttrName">
+            <view class="picker">{{item.aname?item.aname:'北京-2019-07-28-混龄团'}}</view>
+         </picker>
+         <i class="iconfont icon-xia"></i>
+      </view>
+      <view class="section">
+         <i class="iconfont icon-fangkuang"></i>
+         <picker bindchange="bindPickerChange2" data-index="{{index}}" value="{{item.province.regname}}" range="{{proiveList}}" range-key="regname">
+            <view class="picker">{{item.province.regname?item.province.regname:'请选择省'}}</view>                                                         
+         </picker>
+         <i class="iconfont icon-xia"></i>
+      </view>
+      <view class="section">
+         <i class="iconfont icon-fangkuang"></i>
+         <picker bindchange="bindPickerChange3" data-index="{{index}}" value="{{item.city.regname}}" range="{{cityList}}" range-key="regname">
+            <view class="picker">{{item.city.regname?item.city.regname:'请选择市'}}</view>
+         </picker>
+         <i class="iconfont icon-xia"></i>
+      </view>
+   </view>
+   <view class="add">
+      <i class="iconfont icon-jian" catchtap='delInfo' wx:show="{{lists.length > 2}}"></i>  
+      <i class="iconfont icon-wuuiconxiangjifangda" catchtap='addInfo'></i>
+   </view>
+   <!-- 支付 -->
+   <view class="payment" catchtap='payment'>
+      支付500元
+   </view>
+   <modal hidden="{{hidden}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel="true">
+      {{Prompt}}
+   </modal>
+</view>

@@ -1,0 +1,93 @@
+<!--pages/free_up/free_up.wxml-->
+<!--pages/sign_up/sign_up.wxml-->
+<view class="container">
+   <view class="content" wx:for="{{datas.lists}}" wx:key="index">
+      <view class="input">
+         <text>学生姓名</text>
+         <input data-index="{{index}}" bindblur="InputName"></input>
+      </view>
+      <view class="input">
+         <text>手机号码</text>
+         <input data-index="{{index}}" bindblur="InputTel" maxlength='11'></input>
+      </view>
+      <view class="input">
+         <text>所在省市</text>
+         <picker bindchange="bindPickerChange1" data-index="{{index}}" value="{{item.province.regname}}" range="{{proiveList}}" range-key="regname">
+            <view class="picker">{{item.province.regname?item.province.regname:'请选择省'}}</view>
+            <i class="iconfont icon-xia"></i>
+         </picker>
+         <picker bindchange="bindPickerChange2" data-index="{{index}}" value="{{item.city.regname}}" range="{{cityList}}" range-key="regname">
+            <view class="picker">{{item.city.regname?item.city.regname:'请选择市'}}</view>
+            <i class="iconfont icon-xia"></i>
+         </picker>
+      </view>
+      <view class="input">
+         <text>出生日期</text>
+         <picker class="dates" mode="date" value="{{dates}}" start="1900-01-01" end="2100-01-01" data-index="{{index}}" bindchange="bindDateChange">
+            <view class="picker">
+               {{date}}
+            </view>
+            <i class="iconfont icon-xia"></i>
+         </picker>
+      </view>
+      <view class="input">
+         <text>身份证号</text>
+         <input data-index="{{index}}" bindblur="InputNumber" maxlength='18'></input>
+      </view>
+      <view class="input">
+         <text>电子邮箱</text>
+         <input data-index="{{index}}" bindblur="InputEmail"></input>
+      </view>
+      <view class="input">
+         <text>学校名称</text>
+         <input data-index="{{index}}" bindblur="InputSname"></input>
+      </view>
+      <view class="input">
+         <text>选择年级</text>
+         <picker bindchange="bindPickerChange3" data-index="{{index}}" value="{{item.grade1}}" range="{{array}}">
+            <view class="picker">{{item.grade1?item.grade1:'请选择'}}</view>
+            <i class="iconfont icon-xia"></i>
+         </picker>
+         <picker bindchange="bindPickerChange4" data-index="{{index}}" value="{{item.grade2}}" range="{{array}}">
+            <view class="picker">{{item.grade2?item.grade2:'请选择'}}</view>
+            <i class="iconfont icon-xia"></i>
+         </picker>
+      </view>
+      <view class="input">
+         <text>支付定金</text>
+         <!-- <input data-index="{{index}}" bindblur="InputMoney"></input> -->
+         <view class="money">
+            {{item.money}}RMB
+         </view>
+      </view>
+   </view>
+   <view class="add">
+      <i class="iconfont icon-jian" catchtap='delInfo' wx:show="{{lists.length > 2}}"></i>  
+      <i class="iconfont icon-wuuiconxiangjifangda" catchtap='addInfo'></i>
+   </view>
+   <view class="guar">
+      监护人信息
+   </view>
+   <view class="content" style="border-bottom: none;">
+      <view class="input">
+         <text space='emsp'>姓名  </text>
+         <input data-index="{{index}}" bindblur="InputGname"></input>
+      </view>
+      <view class="input">
+         <text>身份证号</text>
+         <input data-index="{{index}}" bindblur="InputGnumber" maxlength='18'></input>
+      </view>
+      <view class="input">
+         <text>手机号码</text>
+         <input data-index="{{index}}" bindblur="InputGtel" maxlength='11'></input>
+      </view>
+   </view>
+   <!-- 支付 -->
+   <view class="payment" catchtap='payment'>
+      提交
+   </view>
+   <modal hidden="{{hidden}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel="true">
+      {{Prompt}}
+   </modal>
+</view>
+

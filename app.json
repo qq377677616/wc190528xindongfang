@@ -1,0 +1,68 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/free_up/free_up",
+    "pages/activity/activity",
+    "pages/login/login",
+    "pages/sign_up/sign_up",
+    "pages/comment/comment",
+    "pages/index_detail/index_detail",
+    "pages/personal/personal",
+    "pages/searchDetail/searchDetail",
+    "pages/camp/camp",
+    "pages/study/study",
+    "pages/activeDetail/activeDetail", 
+    "pages/campDetail/campDetail",
+    "pages/studyDetail/studyDetail",
+    "pages/activityOrder/activityOrder",
+    "pages/studyOrder/studyOrder",
+    "pages/reg_account/reg_account",
+    "pages/userInfo/userInfo",
+    "pages/userDetail/userDetail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#787878",
+    "selectedColor": "#58e18c",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "assets/images/tab1_1.png",
+        "iconPath": "assets/images/tab1.png",
+        "pagePath": "pages/index/index",
+        "text": "国际游学"
+      },
+      {
+        "selectedIconPath": "assets/images/tab2_2.png",
+        "iconPath": "assets/images/tab2.png",
+        "pagePath": "pages/study/study",
+        "text": "国内研学"
+      },
+      {
+        "selectedIconPath": "assets/images/tab3_3.png",
+        "iconPath": "assets/images/tab3.png",
+        "pagePath": "pages/camp/camp",
+        "text": "营地教育"
+      },
+      {
+        "selectedIconPath": "assets/images/tab4_4.png",
+        "iconPath": "assets/images/tab4.png",
+        "pagePath": "pages/activity/activity",
+        "text": "游学活动"
+      },
+      {
+        "selectedIconPath": "assets/images/tab5_5.png",
+        "iconPath": "assets/images/tab5.png",
+        "pagePath": "pages/personal/personal",
+        "text": "个人空间"
+      }
+    ]
+  }
+}

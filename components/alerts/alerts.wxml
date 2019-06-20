@@ -1,0 +1,15 @@
+<!--components/alerts/alerts.wxml-->
+<view class="body" hidden="{{!show}}">
+   <view class="zhezhao"></view>
+   <view class="alert">
+      <view class="gou">
+         <image mode="widthFix" src="../../assets/images/gous.png"></image>
+      </view>
+      <view class="bindSuccess">
+         绑定成功
+      </view>
+      <view class="comfirm">
+         <button bindtap='tapyes'><text space='emsp'>确  定</text></button>
+      </view>
+   </view>
+</view>

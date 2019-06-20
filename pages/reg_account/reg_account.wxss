@@ -1,0 +1,110 @@
+/* pages/reg_account/reg_account.wxss */
+page{
+   width: 100%;
+   height: 100%;
+}
+.container{
+   background: #fafafa;
+   padding: 28rpx 0 140rpx;
+}
+.content{
+   width: 90%;
+   margin: 0 auto;
+   background: #fff;
+   box-shadow: 0px 0px 20px #e5e5ea; 
+   border-radius: 10rpx;
+   padding: 30rpx 40rpx;
+   box-sizing: border-box;
+}
+.content .input text{
+   font-size: 30rpx;
+}
+.content .code text{
+   font-size: 30rpx;
+}
+.input,.code,.inputs{
+   margin-top: 40rpx;
+}
+.content .code input{
+   display: inline-block;
+   width: 32%;
+   height: 80rpx;
+   border: 1px solid #ddd;
+   border-radius: 10rpx;
+   vertical-align: middle;
+   font-size: 28rpx;
+   padding-left: 20rpx;
+}
+.code1{
+   display: inline-block;
+   width: 32%;
+   height: 80rpx;
+   border: 1px solid #ddd;
+   border-radius: 10rpx;
+   margin-left: 1%;
+   vertical-align: middle;
+}
+.code2{
+   display: inline-block;
+   width: 32%;
+   height: 80rpx;
+   border-radius: 10rpx;
+   margin-left: 1%;
+   font-size: 28rpx;
+   vertical-align: middle;
+   background: #d8fff8;
+   color: #54d5b7;
+}
+.content .input input{
+   display: inline-block;
+   width: 65%;
+   height: 80rpx;
+   border: 1px solid #ddd;
+   border-radius: 10rpx;
+   vertical-align: middle;
+   font-size: 28rpx;
+   padding-left: 20rpx;
+}
+.placeholder{
+   font-size: 28rpx;
+   color: #d7d7d7;
+}
+.inputs{
+   color: #c3c3c3;
+   font-size: 22rpx;
+}
+.inputs div{
+   display: inline-block;
+   width: 20rpx;
+   height: 20rpx;
+   border: 1px solid #00c598;
+   border-radius: 50%;
+   vertical-align: middle;
+   margin-right: 10rpx;
+   position: relative;
+}
+.active::before{
+   content:'';
+   width: 15rpx;
+   height: 15rpx;
+   border-radius: 50%;
+   background: #05e5b3;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.reg{
+   margin-top: 80rpx;
+   width: 100%;
+}
+.reg button{
+   width: 80%;
+   background: #04c79d;
+   color: #fff;
+   border-radius: 25px;
+   box-shadow: 0px 5px 40px #e9f5f3;
+}
+.reg button::after{
+   border: none;
+}

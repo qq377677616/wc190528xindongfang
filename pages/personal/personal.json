@@ -1,0 +1,7 @@
+{
+   "navigationBarTitleText": "新东方",
+   "usingComponents": {
+      "alerts": "/components/alerts/alerts"
+   },
+   "disableScroll": true
+}

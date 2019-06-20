@@ -1,0 +1,182 @@
+/* pages/free_up/free_up.wxss */
+/* pages/sign_up/sign_up.wxss */
+page{
+   width: 100%;
+   height: 100%;
+}
+.container{
+   background: #fafafa;
+   padding: 28rpx 0 140rpx;
+   overflow: scroll;
+}
+.content{
+   width: 90%;
+   /* height: 100%; */
+   margin: 0 auto;
+   margin-bottom: 30rpx;
+   border-bottom: 2px solid #eee;
+}
+.input{
+   width: 100%;
+   height: 85rpx;
+   line-height: 85rpx;
+   position: relative;
+   margin-bottom: 30rpx;
+   border-radius: 15rpx;
+   background: #fff;
+   box-shadow: 0 0 40rpx #f3f4f5;
+}
+.input text{
+   border-right: 1px solid #e5e5e5;
+   font-size: 30rpx;
+   color: #646464;
+   padding: 0 45rpx 0 22rpx;
+   vertical-align: middle;
+}
+/* .input i{
+   position: absolute;
+   top: 50%;
+   left: 20rpx;
+   transform: translateY(-50%);
+   color: #01c599;
+   font-size: 34rpx;
+} */
+.input input{
+   display: inline-block;
+   width: 70%;
+   height: 85rpx;
+   padding-left: 50rpx;
+   box-sizing: border-box;
+   font-size: 30rpx;
+   color: #b1b1b1;
+   vertical-align: middle;
+}
+.input .money{
+   display: inline-block;
+   width: 70%;
+   height: 85rpx;
+   box-sizing: border-box;
+   font-size: 30rpx;
+   color: #ff6e6e;
+   vertical-align: middle;
+   text-align: right;
+}
+.input picker{
+   display: inline-block;
+   width: 35%;
+   vertical-align: middle;
+   position: relative;
+}
+.dates{
+   display: inline-block;
+   width: 70% !important;
+   vertical-align: middle;
+   position: relative;
+}
+.picker{
+   width: 100%;
+   height: 85rpx;
+   padding-left: 50rpx;
+   padding-right: 30rpx;
+   box-sizing: border-box;
+   font-size: 30rpx;
+   color: #b1b1b1;
+   overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+}
+
+.input picker i{
+   position: absolute;
+   top: 50%;
+   right: 10rpx;
+   transform: translateY(-50%);
+   color: #b1b1b1;
+   font-size: 28rpx;
+}
+/* .placeholder{
+   font-size: 30rpx;
+   color: #b1b1b1;
+}
+.section{
+   width: 100%;
+   position: relative;
+   margin-bottom: 30rpx;
+}
+.section .icon-qizi{
+   position: absolute;
+   top: 50%;
+   left: 20rpx;
+   transform: translateY(-50%);
+   color: #01c599;
+   font-size: 34rpx;
+}
+.section .icon-fangkuang{
+   position: absolute;
+   top: 50%;
+   left: 20rpx;
+   transform: translateY(-50%);
+   color: #e3e3e3;
+   font-size: 34rpx;
+}
+.section .icon-xia{
+   position: absolute;
+   top: 50%;
+   right: 30rpx;
+   transform: translateY(-50%);
+   color: #b1b1b1;
+   font-size: 34rpx;
+}
+.picker{
+   background: #fff;
+   height: 85rpx;
+   line-height: 85rpx;
+   border-radius: 10rpx;
+   padding-left: 70rpx;
+   font-size: 30rpx;
+   color: #b1b1b1;
+} */
+.payment{
+   width: 100%;
+   height: 100rpx;
+   line-height: 100rpx;
+   background: #01c498;
+   color: #fff;
+   text-align: center;
+   position: fixed;
+   bottom: 0;
+   z-index: 10;
+}
+.submit{
+   margin-top: 20rpx;
+   padding-top: 20rpx;
+   /* border-top: 1px solid #ddd; */
+}
+.submit button{
+   width: 30%;
+   height: 70rpx;
+   line-height: 70rpx;
+   font-size: 32rpx;
+   margin: auto;
+   background: #04c79d;
+   color: #fff;
+   border-radius: 25px;
+}
+.add{
+   text-align: center;
+}
+.add  i{
+   font-size: 60rpx;
+   line-height: 90rpx;
+   color: #04c79d;
+   padding-right: 30rpx;
+}
+.guar{
+   padding: 30rpx;
+   box-sizing: border-box;
+   width: 90%;
+   margin: auto;
+   font-size: 36rpx;
+   color: #474747;
+   font-weight: bold;
+}

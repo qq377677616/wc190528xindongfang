@@ -1,0 +1,65 @@
+<!--pages/activity/activity.wxml-->
+<!--index.wxml-->
+<scroll-view scroll-y class="container">
+   <!-- <view class="height_25"></view> -->
+   <view class="header">
+      <view class="didian">
+         {{city}}
+         <image mode="widthFix" src="../../assets/images/xia.png"></image>
+      </view>
+      <view class="input">
+         <image mode="widthFix" src="../../assets/images/search.png"></image>
+         <input placeholder='输入想去游学的地点' placeholder-class="placeholder" bindblur='inputFocus'/>
+         <button catchtap='search'>搜索</button>
+      </view>
+   </view>
+   <view class="tabBox">
+      <div class="tabList">
+         <div class="li {{current==1?'actives':''}}" bindtap="clickTab" data-current="1">
+            推荐
+         </div>
+         <div class="li {{current==2?'actives':''}}" bindtap="clickTab" data-current="2">
+            最新
+         </div>
+         <div class="li {{current==3?'actives':''}}" bindtap="clickTab" data-current="3">
+            热度
+         </div>
+      </div>
+      <view class="bodys" wx:for="{{lists}}" wx:key="index">
+         <view class="img" catchtap='link_detail' data-id="{{item.id}}">
+            <image mode="widthFix" src="{{item.pic_up}}"></image>
+         </view>
+         <view class="title">
+            主题：{{item.title}}
+         </view>
+         <view class="t1">
+            活动介绍：{{item.introduce}}
+         </view>
+         <view class="t2">
+            <div>
+               地址：{{item.address}}
+            </div>
+            <div>
+               报名中
+            </div>
+         </view>
+      </view>
+      
+      
+   </view>
+   <!-- 点击搜索弹出框 -->
+   <!-- <view class="box" wx:if="{{isSerach}}">
+      <view class="search">
+         <input placeholder='单行输入' placeholder-class='placeholder'></input>
+         <view class="canel" catchtap='canel'>取消</view>
+      </view>
+      <view class="content" wx:for="{{datas}}">
+         <view class="title">{{item.title}}</view>
+         <view class="{{item.title=='主题'?'content_body1':'content_body'}}">
+            <view wx:for="{{item.arrList}}" wx:for-item="items" wx:key="indexs" wx:for-index="indexs" class="{{item.index == indexs ? 'active':''}}" data-indexs="{{indexs}}" data-index="{{index}}" catchtap='btn1'>
+               {{items.name}}
+            </view>
+         </view>
+      </view>
+   </view> -->
+</scroll-view>

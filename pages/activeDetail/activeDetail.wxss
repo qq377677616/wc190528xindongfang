@@ -1,0 +1,140 @@
+/* pages/activeDetail/activeDetail.wxss */
+.container {
+   padding: 0;
+}
+.content{
+   width: 100%;
+   height: 100%;
+   background: #f9fafc;
+   padding-bottom: 100rpx;
+}
+.banner{
+   width: 100%;
+}
+.banner image{
+   width: 100%;
+}
+.title{
+   padding: 0 25rpx;
+   font-size: 36rpx;
+   /* font-weight: bold; */
+}
+.c1{
+   padding: 0 25rpx;
+   padding-top: 35rpx;
+   font-size: 28rpx;
+}
+.c1 text{
+   color: #cecece;
+}
+.c2{
+   padding: 20rpx 25rpx 35rpx;
+   border-bottom: 1px solid #eeeeee;
+   font-size: 28rpx;
+   position: relative;
+   overflow: hidden;
+}
+.c2 text{
+   color: #cecece;
+}
+.c2 view{
+   width: 50%;
+   float: left;
+}
+.c2 .right{
+   color: #cecece;
+}
+.icon-fenxiang{
+   position: absolute;
+   right: 30rpx;
+   color: #00c498;
+   font-size: 36rpx;
+}
+.notes{
+   padding: 35rpx 25rpx;
+   border-bottom: 1px solid #eeeeee;
+}
+.notes .h1{
+   font-size: 30rpx;
+   font-weight: bold;
+}
+.notes .body{
+   padding-top: 25rpx;
+   font-size: 22rpx;
+   color: #979797;
+   text-indent: 35rpx;
+}
+.activeDesc{
+   padding: 35rpx 25rpx;
+}
+.activeDesc .h1{
+   font-size: 30rpx;
+   font-weight: bold;
+}
+.activeDesc .body{
+   padding-top: 25rpx;
+   font-size: 22rpx;
+   color: #979797;
+}
+.activeDesc .img{
+   margin-top: 25rpx;
+}
+.activeDesc .img image{
+   width: 100%;
+   border-radius:15rpx;
+
+}
+.money{
+   background: #fff;
+   border-radius: 10rpx;
+   margin-top: 25rpx;
+}
+.m1{
+   padding: 0 40rpx;
+   overflow: hidden;
+   line-height: 70rpx;
+}
+.m1 view{
+   width: 50%;
+   float: left;
+   font-size: 26rpx;
+}
+.m1 .right{
+   text-align: right;
+   color: #fe5959;
+}
+.m2{
+   border-top: 1px solid #e4e4e4;
+   line-height: 80rpx;
+   text-align: right;
+   padding: 0 40rpx;
+   color: #afafaf;
+   font-size: 24rpx;
+}
+.kefu{
+   width: 100rpx;
+   height: 100rpx;
+   background: #ffc155;
+   position: fixed;
+   right: -10rpx;
+   top:70%;
+   text-align: center;
+   line-height: 100rpx;
+   border-top-left-radius: 25px;
+   border-bottom-left-radius: 25px;
+}
+.kefu i{
+   font-size: 50rpx;
+   font-weight: bold;
+   color: #fff;
+}
+.payment{
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 100rpx;
+   line-height: 100rpx;
+   background: #00c498;
+   text-align: center;
+   color: #fff;
+}

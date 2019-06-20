@@ -1,0 +1,62 @@
+<!--pages/activityOrder/activityOrder.wxml-->
+<!--pages/studyOrder/studyOrder.wxml-->
+<view class="container">
+   <view class="body">
+      <!-- <view class="tabList">
+         <view class="list {{current==1?'active':''}}" data-index="1" catchtap='tablink'>线上订单</view>
+      </view> -->
+      <view class="content1">
+         <view class="box">
+            <view class="header">
+               <view class="left">订单编号：10652354</view>
+               <view class="right">已报名</view>
+            </view>
+            <view class="bodys">
+               <view class="body_1">
+                  <image mode="widthFix" src="../../assets/images/shop.png"></image>
+               </view>
+               <view class="body_2">
+                  <view class="title">
+                     【英国高端夏校项目资源系】2线-【英国九大公学】英国哈罗公学夏校
+                  </view>
+                  <view class="bmf">
+                     报名费：￥5000.00RMB
+                  </view>
+                  <view class="xc">
+                     行程：15天
+                  </view>
+               </view>
+            </view>
+            <view class="btn">
+               <button class="refund">退款</button>
+            </view>
+         </view>
+         <view class="box">
+            <view class="header">
+               <view class="left">订单编号：10652354</view>
+               <view class="right">已报名</view>
+            </view>
+            <view class="bodys">
+               <view class="body_1">
+                  <image mode="widthFix" src="../../assets/images/shop.png"></image>
+               </view>
+               <view class="body_2">
+                  <view class="title">
+                     【英国高端夏校项目资源系】2线-【英国九大公学】英国哈罗公学夏校
+                  </view>
+                  <view class="bmf">
+                     报名费：￥5000.00RMB
+                  </view>
+                  <view class="xc">
+                     行程：15天
+                  </view>
+               </view>
+            </view>
+            <view class="btn">
+               <button class="refund">退款</button>
+            </view>
+         </view>
+      </view>
+   </view>
+</view>
+
